@@ -10,14 +10,14 @@ graph TD;
     buffer-->消费者;
 ```
 
-### code
+### semaphore
 ```
 semaphore mutex = 1;  //临界区互斥信号量
 semaphore empty = n;  //空闲缓冲区个数
 semaphore full = 0;   //缓冲区初始化
 ```
 
-#### producer process
+### producer process
 
 ```
 producer(){
@@ -32,7 +32,7 @@ producer(){
 }
 ```
 
-#### consumer process
+### consumer process
 
 ```
 consumer(){
