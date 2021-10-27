@@ -51,6 +51,7 @@ reader(){
 ### writer first
 #### semaphore
 **增加一对PV操作来保证写优先**
+1. 这样相当于让整个写进程成为互斥资源；
 ```
 int count = 0;        //进程计数
 semaphore mutex = 1;  //保证count互斥信号量
