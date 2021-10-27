@@ -4,18 +4,15 @@
 2. 只允许一个写者往文件中写信息；
 3. 任一写者在完成写操作之前不允许其他读者或者写者工作；
 4. 写者执行写操作前，应让已有的读者和写者全部退出；
-
 ### analysis
 * 读者-写者问题
 * 写者和读者、写者和写者对文件的访问是互斥（exclusion）关系；
-
 ### graph
 ```mermaid
 graph TD;
     写者1-->file; 写者2-->file; 写者n-->file;
     file---读者1; file---读者2; file---读者n;
 ```
-
 ### reader first
 #### semaphore
 ```
